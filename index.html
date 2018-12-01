@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>
+			Rainbow Text Generator
+		</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css"></link>
+	</head>
+	<body>
+		<div id="controls" class="transition-1 border-1 background">
+			<textarea id="input" spellcheck="false" class="transition-1 border-1" value="LOREM IPSUM" onclick="clearFields()" onblur="resetFields()"></textarea>
+			<p id="rainbow-frequency-label">Rainbow frequency: </p>
+			<input id="rainbow-frequency" class="transition-1 border-1" type="text" value="0.5"></input>
+			<button id="generate-button" class="transition-1 border-1" onclick="generate()">Generate</button>
+		</div>
+		<p id="output" spellcheck="false" class="transition-1 border-1 background" contenteditable></p>
+		
+		<script type="text/javascript" src="lorem-ipsum.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>

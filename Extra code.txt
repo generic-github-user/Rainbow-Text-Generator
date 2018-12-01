@@ -1,0 +1,52 @@
+function copyOutputHTML(){
+	getInformation();
+	if(output.innerHTML == ""){
+		alert("No text to copy.");
+	}
+	else{
+		document.querySelectorAll("output");
+		document.execCommand("Copy");
+		alert("Copied output.");
+	}
+}
+
+#copy-button {
+	width:60%;
+	height:25%;
+	font-weight:bold;
+	
+	background-color:rgba(240,240,240,1);
+
+	border-radius:20px;
+}
+#copy-button:hover {
+	height:40%;
+	
+	background-color:rgba(220,220,220,1);
+	
+	border-radius:40px;
+	border-color:rgba(240,240,255,1);
+}
+#copy-button:active {
+	background-color:rgba(200,200,200,1);
+	border-color:rgba(230,230,255,1);
+	
+	transition-duration:0.1s;
+}
+
+<button id="copy-button" class="transition-1 border-1" onclick="copyOutputHTML()">Copy</button>
+
+function copyOutputHTML(){
+	getInformation();
+	
+	if(output == ""){
+		//alert("No text to copy.");
+	}
+	//else{
+		output = document.getElementById("output").innerHTML;
+		document.querySelectorAll(output);
+		document.execCommand("Copy");
+		alert("Copied output.");
+		console.log(output);
+	//}
+}
